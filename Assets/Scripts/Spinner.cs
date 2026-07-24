@@ -3,7 +3,7 @@ using UnityEngine;
 public class Spinner : MonoBehaviour
 {
 
-    private bool isSpinning = false;  // Variable to track whether the spinner is currently spinning or not
+    [SerializeField] private bool isSpinning = false;  // Variable to track whether the spinner is currently spinning or not
 
     public void ChangeState() // Method to toggle the spinning state of the spinner
     {
