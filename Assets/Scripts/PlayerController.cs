@@ -47,9 +47,10 @@ public class PlayerController : MonoBehaviour
             verticalVelocity += gravity * Time.deltaTime;
         }
 
-        moveDirection.y = verticalVelocity;
 
         moveDirection = transform.TransformDirection(moveDirection);
+
+        moveDirection.y = verticalVelocity;
 
         characterController.Move(moveDirection * Time.deltaTime);
 
