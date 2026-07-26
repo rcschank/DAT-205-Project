@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
     public void AddScore(int amount)
     {
         score += amount;
-        scoreText.text = score.ToString(); // Initialize the score text at the start of the game
+        scoreText.text = $"{score} / {coinsToCollect}"; // Initialize the score text at the start of the game
         if (score >= coinsToCollect)  // If the score exceeds the number of coins to collect, trigger the GameOver state
         {
             LevelOver();
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
     {
         CurrentState = GameState.Playing;
         score = 0;
-        scoreText.text = score.ToString(); // Initialize the score text at the start of the game        
+        scoreText.text = $"{score} / {coinsToCollect}"; // Initialize the score text at the start of the game
         Time.timeScale = 1f;
         buttonText.text = "Pause"; // Change the button text to "Pause" when the game starts
     }
