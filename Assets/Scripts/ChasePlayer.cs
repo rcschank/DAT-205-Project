@@ -41,21 +41,13 @@ public class ChasePlayer : MonoBehaviour
         if (distance < 1f)  // If the distance between the enemy and the player is less than 0.5 units, pause the enemy's movement for 2 seconds
         {
             pauseTimer = 2f;  // Set the pause timer to 2 seconds, causing the enemy to stop moving for that duration
-            DropCoin();  // Call the DropCoin method to drop a coin when the enemy is close enough to the player
+            Caught();  // Call the Caught method to handle the event when the enemy is close enough to the player
         }
     }
 
-    private void DropCoin()
+    private void Caught()
     {
-        if (GameManager.Instance.score > 0)  // Check if the player's score is greater than 0 before dropping a coin
-        {
-            GameManager.Instance.AddScore(-1);  // Subtract 1 from the player's score when the enemy drops a coin
-            Instantiate(coinPrefab, transform.position, Quaternion.identity);  // Instantiate a coin prefab at the enemy's position when dropping a coin
-            if (dropCoinSound != null)  // Check if the dropCoinSound is not null before playing the sound
-            {
-                AudioSource.PlayClipAtPoint(dropCoinSound, transform.position);  // Play the drop coin sound at the enemy's position when dropping a coin
-            }
-        }
+        GameManager.Instance.GameOver(true);  // Call the GameOver method on the GameManager instance, passing true to indicate that the player was caught by the enemy
     }
 
 }

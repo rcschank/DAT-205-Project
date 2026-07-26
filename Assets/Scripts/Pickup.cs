@@ -7,6 +7,11 @@ public class Pickup : MonoBehaviour
 
     [SerializeField] private int scoreValue = 1; // Score value to add when the pickup is collected
 
+    void Start()
+    {
+        GameManager.Instance.AddCoinToCollect(); // Increment the count of coins to collect in the GameManager when the pickup is created
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
