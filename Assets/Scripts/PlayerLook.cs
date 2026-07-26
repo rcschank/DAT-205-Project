@@ -22,6 +22,12 @@ public class PlayerLook : MonoBehaviour
 
     void Update()
     {
+
+        if (GameManager.Instance.CurrentState != GameManager.GameState.Playing)  // If the game is not in the Playing state, do not process player movement
+        {
+            return;
+        }
+
        lookInput = lookAction.action.ReadValue<Vector2>();
 
        transform.Rotate(0f, lookInput.x * sensitivity, 0f);

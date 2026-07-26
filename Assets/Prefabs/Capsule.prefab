@@ -127,3 +127,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40abf20f5114d2c439952ff5c116f445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spinner
+  isSpinning: 0
+  rotationDirection: {x: 0, y: 45, z: 0}

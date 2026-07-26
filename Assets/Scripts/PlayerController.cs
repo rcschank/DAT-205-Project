@@ -32,6 +32,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.CurrentState != GameManager.GameState.Playing)  // If the game is not in the Playing state, do not process player movement
+        {
+            return;
+        }
+
         moveInput = moveAction.action.ReadValue<Vector2>();
 
         moveDirection.x = moveInput.x * speed;
