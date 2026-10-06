@@ -156,6 +156,7 @@ MonoBehaviour:
   startSound: {fileID: 0}
   startButton: {fileID: 0}
   quitButton: {fileID: 0}
+  musicIndex: 0
   showCountdown: 0
 --- !u!4 &70056155
 Transform:
@@ -286,7 +287,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7a7ea3e275afc3c42bd76b15b5d8469c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1beb36e53801aea45b66ecf8a979aca1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

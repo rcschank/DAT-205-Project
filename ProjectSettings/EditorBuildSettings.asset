@@ -4,5 +4,29 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 063cc1a6ce4d956499e317b1843a132c
+  - enabled: 1
+    path: Assets/Scenes/Cut Scene.unity
+    guid: cdabef809cc0d10469b009d182c83dbd
+  - enabled: 1
+    path: Assets/Scenes/GameOverCaught.unity
+    guid: 6f4f0a7fe066bf944844244de7f27301
+  - enabled: 1
+    path: Assets/Scenes/GameOverWon.unity
+    guid: 8f75e3a459cc0b64ea0494ced76efa0b
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: c3826f4c835c24e4ebcecf79e8fb31fc
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: f0e1ace458d5f8f42a12a7603dc32d5c
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 9b44f3150e09f88468c3a78f7501b8ce
+  - enabled: 1
+    path: Assets/Scenes/Load Scene.unity
+    guid: 3bcd52710d9ff71478e00b6d6e327b9c
   m_configObjects: {}
